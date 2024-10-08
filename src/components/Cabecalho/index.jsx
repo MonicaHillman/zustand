@@ -2,10 +2,13 @@ import styles from "./styles.module.css";
 import logoImg from "/src/assets/imgs/logo.png";
 import focoImg from "/src/assets/imgs/foco.png";
 
-import { useCronometroStore } from "../../store";
-
 export default function Cabecalho() {
-  const modoCronometro = useCronometroStore((estado) => estado.modoCronometro);
+  const modoCronometro = {
+    id: "foco",
+    nome: "Foco",
+    frase: ["Otimize sua produtividade,", "mergulhe no que importa."],
+    tempoInicialEmSegundos: 30,
+  };
 
   const [primeiroTexto, segundoTexto] = modoCronometro.frase;
 

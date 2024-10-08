@@ -4,10 +4,14 @@ import Cabecalho from "./components/Cabecalho";
 import Cronometro from "./components/Cronometro";
 import ListaDeTarefas from "./components/ListaDeTarefas";
 import Rodape from "./components/Rodape";
-import { useCronometroStore } from "./store";
 
 function App() {
-  const modoCronometro = useCronometroStore((estado) => estado.modoCronometro);
+  const modoCronometro = {
+    id: "foco",
+    nome: "Foco",
+    frase: ["Otimize sua produtividade,", "mergulhe no que importa."],
+    tempoInicialEmSegundos: 30,
+  };
 
   return (
     <div className={styles[`app--${modoCronometro.id}`]}>
